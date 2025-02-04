@@ -25,7 +25,7 @@ import {
     };
   
     return (
-      <div className="flex items-center justify-center  bg-blue-200 min-h-screen">
+      <div className="flex items-center justify-center  bg-blue-200 min-h-screen bg-gradient-to-br from-pink-400 via-purple-400 to-indigo-400">
         <Card className="max-w-[400px]">
           <CardHeader className="flex gap-3">
             <Image
