@@ -6,7 +6,7 @@ const app = express();
 const server = http.createServer(app);
 
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  res.send("Server is up and running!");
 });
 
 const io = new Server(server, {
@@ -16,13 +16,19 @@ const io = new Server(server, {
 });
 
 io.on("connection", (socket) => {
-  console.log("A user connected");
-  socket.on("emoji", (emoji) => {
-    socket.broadcast.emit("newEmoji", emoji);
-    console.log(`New emoji: ${emoji}`);
+  console.log(`New client connected: ${socket.id}`);
+
+  socket.on("new_user", (data) => {
+    console.log("New user joined our chat room", data);
+
+    socket.broadcast.emit("user_joined", data);
+
+    // io.emit (sab ke pass)
+    // socket.emit (jisne new user diya tha uske pass only)
+    // socket.broadcast.emit (jisne new user diya tha usko chodh kar baki sab)
   });
 });
 
 server.listen(8000, () => {
-  console.log("Server is running on port 8000");
+  console.log("Server is up and running");
 });
