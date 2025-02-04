@@ -3,9 +3,7 @@ import { Button, Card } from "@heroui/react";
 import { useState, useEffect } from "react";
 import { io } from "socket.io-client";
 
-const server = io(
-  "https://didactic-space-eureka-5g4x69j677pjh4qjj-8000.app.github.dev/"
-);
+const server = io("https://regulatory-maurine-phleeb-966f2fda.koyeb.app/");
 function Emoji() {
   const [emoji, setEmoji] = useState("😎");
   useEffect(() => {
