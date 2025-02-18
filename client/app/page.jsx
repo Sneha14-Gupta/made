@@ -4,9 +4,7 @@ import { Messages, Inputs, SignUp } from "@/components";
 import { useEffect, useState } from "react";
 import { io } from "socket.io-client";
 
-const socket = io(
-  "https://didactic-space-eureka-5g4x69j677pjh4qjj-8000.app.github.dev/"
-);
+const socket = io("https://evident-shandy-gliesssseee-520ab379.koyeb.app/");
 
 export default function Home() {
   const [user, setUser] = useState(null);
