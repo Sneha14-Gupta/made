@@ -50,15 +50,14 @@ function SignUp({ setUser, socket }) {
         <Card className="max-w-[400px]">
           <CardHeader className="flex gap-3">
             <Image
-              alt="made logo"
+              alt="logo"
               height={40}
               radius="sm"
-              src="favicon.ico"
+              src="./chat.png"
               width={40}
             />
             <div className="flex flex-col">
               <p className="text-md">MADE Room</p>
-              <p className="text-small text-default-500">made.phleebs.tech</p>
             </div>
           </CardHeader>
 
@@ -86,7 +85,7 @@ function SignUp({ setUser, socket }) {
             <Link
               isExternal
               showAnchorIcon
-              href="https://github.com/Sneha14-Gupta/made-room"
+              href="https://github.com/Sneha14-Gupta/made"
             >
               Visit source code on GitHub.
             </Link>
